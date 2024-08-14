@@ -7,7 +7,7 @@
 }
 <div class="navlink">
     <a href="/Teacher/New">Add New Teacher</a>
-    <a href="/Class/List">Go to Class Overview</a>
+    <a href="/Course/List">Go to Class Overview</a>
 </div>
 <div class="main-content">
     <h2>List of Teachers</h2>
@@ -18,7 +18,7 @@
         building a search bar-->
     <form method="post" action="/Teacher/List">
         <div>
-            <input type="text" name="SearchKey" placeholder="please enter teacher's name" class="myinput"/>
+            <input type="text" name="SearchKey" placeholder="please enter teacher's name" class="myinput" />
             <input type="submit" value="Search" id="submit" class="mybutton" />
         </div>
 
@@ -26,8 +26,10 @@
 
     @foreach (var teacher in Model)
     {
-        <div><a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherName</a></div>
-    }
-</div>
+        <div class="listitem row">
+            <div class="col-md-12"><a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherName</a></div>
+            </div>
+                }
+            </div>
 
 

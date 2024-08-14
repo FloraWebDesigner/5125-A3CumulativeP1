@@ -9,7 +9,7 @@
 <div class="main-content">
     <h2>Please add New Teacher</h2>
 
-    <form method="POST" action="/Teacher/Create" class="newTeacher">
+    <form method="POST" action="/Teacher/Create" class="newTeacher" onsubmit="return ValidateTeacher();">
         <div>
             <label>Teacher's First Name</label>
             <input type="text" name="TeacherFname" id="TeacherFname" class="newinput" />
@@ -42,15 +42,23 @@
 
 
         <input type="submit" value="Add Teacher" id="AddTeacher" class="mybutton" />
+        <div id="ErrorBox" style="display:none;"></div>
     </form>
 
 </div>
+
+<!-- Updated on 0812  -->
+
+@{
+    <script src="~/Scripts/teachers.js">
+    </script>
+}
 
 
 <!--
 <script src="~/Scripts/newteacher.js"></script>
 Fail to make JS validation work /(ㄒoㄒ)/~~
-    -->
+   
 <script>
 
     /*   Created debug.writeline in MVC controller, the browser shows:"The parameters dictionary contains a null entry for parameter 'TeacherHireDate' of non-nullable type 'System.DateTime' for method 'System.Web.Mvc.ActionResult Create(System.String, System.String, System.String, System.DateTime, System.Decimal)' in 'CumulativeP1.Controllers.TeacherController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
@@ -159,7 +167,8 @@ Fail to make JS validation work /(ㄒoㄒ)/~~
         }
     }
 
-    btn.onsubmit = onSubmit;
+    // error shows up
+    // btn.onsubmit = onSubmit;
 
 
 
@@ -169,6 +178,6 @@ Fail to make JS validation work /(ㄒoㄒ)/~~
 
 </script>
 
-
+    -->
 
 

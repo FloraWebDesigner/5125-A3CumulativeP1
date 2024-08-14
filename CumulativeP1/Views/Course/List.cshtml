@@ -1,17 +1,17 @@
-﻿@model IEnumerable<CumulativeP1.Models.Class>
+﻿@model IEnumerable<CumulativeP1.Models.Course>
 @{
     ViewBag.Title = "List";
 }
 <div class="navlink"><a href="/Teacher/List">Click here to Teacher List.</a></div>
 <div class="main-content">
-    <h2>Class Overview</h2>
-    <p>There are <strong class="highlight">@Model.Count()</strong> classes in the school database.</p>
+    <h2>Course Overview</h2>
+    <p>There are <strong class="highlight">@Model.Count()</strong> courses in the school database.</p>
 
     <!--initiave attempt!
         building a search bar-->
-    <form method="post" action="/Class/List">
+    <form method="post" action="/Course/List">
         <div>
-            <input type="text" name="SearchKey" placeholder="please enter class name" class="myinput"/>
+            <input type="text" name="SearchKey" placeholder="please enter course name" class="myinput"/>
             <input type="submit" value="Search" id="submit" class="mybutton" />
         </div>
 
@@ -29,14 +29,14 @@
         </thead>
         <tbody>
             <!--I want to show students data from the link in class, so tricky, and found examples from StackOverFlow: https://stackoverflow.com/questions/6278694/url-action-parameters as a reference.  -->
-            @foreach (var classes in Model)
+            @foreach (var courses in Model)
             {
                 <tr>
-                    <td>@classes.ClassCode</td>
-                    <td>@classes.ClassName</td>
-                    <td>@classes.StartDate</td>
-                    <td>@classes.FinishDate</td>
-                    <td><a href="@Url.Action("Show", "Class", new { ClassId = classes.ClassId.ToString() })">Check Student Enrolment</a></td>
+                    <td>@courses.CourseCode</td>
+                    <td>@courses.CourseName</td>
+                    <td>@courses.StartDate</td>
+                    <td>@courses.FinishDate</td>
+                    <td><a href="@Url.Action("Show", "Course", new { CourseId = courses.CourseId.ToString() })">Check Student Enrolment</a></td>
                 </tr>
             }
         </tbody>

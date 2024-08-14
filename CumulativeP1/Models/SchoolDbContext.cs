@@ -31,6 +31,7 @@ namespace CumulativeP1.Models
                  + "; port = " + Port
                  + "; password = " + Password
                  + "; convert zero datetime = True";
+
             }
         }
 
@@ -45,7 +46,7 @@ namespace CumulativeP1.Models
         /// <returns>
         /// A MySqlConnection Object
         /// </returns>
-        public MySqlConnection AccessDatabase()
+        public static MySqlConnection AccessDatabase()
         {
             return new MySqlConnection(ConnectionString);
         }

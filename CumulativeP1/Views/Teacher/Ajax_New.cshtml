@@ -12,10 +12,10 @@
     <h2>Please add New Teacher</h2>
 
     @{
-/* AJAX Request to add author */
-/* No form submission needed */
-/* button onclick will handle form submission */
-/* Each item has an ID for validation && ajax submission */
+        /* AJAX Request to add teacher */
+        /* No form submission needed */
+        /* button onclick will handle form submission */
+        /* Each item has an ID for validation && ajax submission */
     }
     <div>
         <label>Teacher's First Name</label>
@@ -41,18 +41,19 @@
         <label>Hire Date</label>
         <input type="date" name="TeacherHireDate" id="TeacherHireDate" class="newinput" />
     </div>
-    
+
 
     @{
-// <!---It works!!!   0729-->
+        // <!---It works!!!   0729-->
 
-//AddTeacher() is a JS method defined in /Scripts/teachers.js
+        //AddTeacher() is a JS method defined in /Scripts/teachers.js
 
         <script src="~/Scripts/teachers.js">
         </script>
-        }
+    }
     <div>
-       <button onclick="AddTeacher()">Add Teacher</button>
+        <button onclick="AddTeacher()">Add Teacher</button>
     </div>
+    <div id="ErrorBox" style="display:none;"></div>
 </div>
 

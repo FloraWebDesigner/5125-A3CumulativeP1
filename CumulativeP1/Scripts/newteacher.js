@@ -3,7 +3,8 @@
 
 
 /* my codes below                  */
-window.onload = pageReady;
+// window.onload = pageReady;
+
 
 function pageReady() {
 	let TeacherFname = document.getElementById("TeacherFname");
@@ -95,7 +96,7 @@ function pageReady() {
                 event.preventDefault(event);
             }
         }
-    
-        btn.onsubmit=onSubmit;
+   // btn.onsubmit=onSubmit;
+       
 
 }

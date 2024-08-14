@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<div class="navlink">
+    <a href="/Teacher/Show/@Model.TeacherId">Back</a>
+</div>
+<div class="main-content">
+    <h2>Update @Model.TeacherFname @Model.TeacherLname</h2>
+
+    <form method="POST" action="/Teacher/Edit/@Model.TeacherId" class="newTeacher" onsubmit="return ValidateTeacher();">
+        <div>
+            <label>Teacher's First Name</label>
+            <input type="text" name="TeacherFname" id="TeacherFname" class="newinput" value="@Model.TeacherFname" />
+        </div>
+
+        <div>
+            <label>Teacher's Last Name</label>
+            <input type="text" name="TeacherLname" id="TeacherLname" class="newinput" value="@Model.TeacherLname" />
+        </div>
+
+        <div>
+            <label>Employee Number</label>
+            <input type="text" name="EmployeeNumber" id="EmployeeNumber" class="newinput" value="@Model.EmployeeNumber" />
+        </div>
+
+        <div>
+            <label>Salary</label>
+            <input type="number" name="TeacherSalary" id="TeacherSalary" step="0.01" class="newinput" value="@Model.TeacherSalary" />
+        </div>
+
+        <div>
+            <label>Hire Date</label>
+            <input type="date" name="TeacherHireDate" id="TeacherHireDate" class="newinput" value="@Model.TeacherHireDate.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <input type="submit" value="Update Teacher" id="AddTeacher" class="mybutton" />
+        <div id="ErrorBox" style="display:none;"></div>
+    </form>
+
+</div>
+
+@{
+    <script src="~/Scripts/teachers.js">
+    </script>
+}
+
+

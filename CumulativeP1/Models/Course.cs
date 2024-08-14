@@ -5,12 +5,12 @@ using System.Web;
 
 namespace CumulativeP1.Models
 {
-    public class Class
+    public class Course
     {
         // use this class to describe what classes' properties are for other components
-        public int ClassId { get; set; }
-        public string ClassName  { get; set; }
-        public string ClassCode { get; set; }
+        public int CourseId { get; set; }
+        public string CourseName  { get; set; }
+        public string CourseCode { get; set; }
         // change DATETIME type for StartDate to take out 12:00AM
         public string StartDate { get; set; }
         // change DATETIME type for EndDate to take out 12:00AM
@@ -28,7 +28,7 @@ namespace CumulativeP1.Models
         public string StudentNumber { get; set; }
         // change DATETIME type for Entoldate to take out 12:00AM
         public string Enroldate { get; set; }
-        public int ClassId { get; set;}
+        public int CourseId { get; set;}
 
 
     }
